@@ -1,14 +1,12 @@
 FROM node:18-alpine
 
+# Устанавливаем инструменты для сборки нативных модулей
+RUN apk add --no-cache python3 make g++
+
 WORKDIR /app
 
 COPY package*.json ./
-
-RUN echo "=== Files in /app after COPY ===" && ls -la
-
-RUN echo "=== Content of package.json ===" && cat package.json
-
-RUN npm install --verbose
+RUN npm install
 
 COPY . .
 
