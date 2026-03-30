@@ -1,10 +1,12 @@
 {
-   "name": "javascript-fastify-blog",
-   "version": "0.1.0",
-   "type": "module",
-   "description": "javascript-fastify-blog",
-   "engines": {
-      "node": ">=20.x"
+  "name": "js-fastify-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "fastify": "^4.0.0"
    },
    "scripts": {
       "migrate": "sequelize db:migrate",
