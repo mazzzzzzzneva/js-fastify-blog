@@ -3,7 +3,8 @@ FROM node:18-alpine
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN cat package.json   # просто посмотрим, что внутри
+RUN npm install --verbose   # добавим verbose, чтобы увидеть детали
 
 COPY . .
 
