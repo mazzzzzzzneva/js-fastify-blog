@@ -1,7 +1,6 @@
 FROM node:18-alpine
 
-# Устанавливаем инструменты для сборки нативных модулей
-RUN apk add --no-cache python3 make g++
+RUN apk add --no-cache python3 make g++ py3-setuptools
 
 WORKDIR /app
 
