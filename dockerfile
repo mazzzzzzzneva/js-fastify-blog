@@ -3,7 +3,8 @@ FROM node:18-alpine
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm ci --only=production
+# Используем npm install, если нет package-lock.json
+RUN npm install --only=production
 
 COPY . .
 
